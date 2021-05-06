@@ -9,7 +9,8 @@ body{margin:0px;font-family: 'Roboto';}
 border-radius: 30px;padding:15px 20px 15px 20px;color:white;}
 
 header
-{padding: 20px 26vw 15px 26vw;background-color: #f8f6f4;}
+{padding: 20px 26vw 15px 26vw;background-color: #f8f6f4;
+position: relative;}
 /*SEARCH*/
 #searchBar1
 {background: linear-gradient(#D7D4D1,27%,#F2F2F2);
@@ -127,4 +128,37 @@ padding: 5px 10px 5px 10px;}
 
 .footerContain i
 {margin-right: 8px;}
+
+
+     
+.blocpageRestaurants 
+{
+   padding: 0px;
+}
+/*HEADER restaurants*/  
+/*.restaurantsHeaders{
+    margin: 0px; padding: 20px 20px 15px 20px;
+}*/
+.back i {
+    color: black; 
+    text-decoration: none; font-size: 1.4em;
+    position: absolute; left: 5vw; top: 3vh;
+} 
+
+/*Meal title*/
+.mealBloc {border-top-left-radius: 50px; border-top-right-radius: 50px;
+background-color: #f8f6f4;padding: 6vh 5vw 10vh 5vw; margin-top: -60px;}
+
+.mealPicture img {width: 100vw; height: 30vh;background-image: url(images/alafrançaise.jpg);}
+
+.mealBloc h1 {font-family: 'Shrikhand';}
+.mealBloc h1 i {margin-left: 60px;} 
+
+.mealBoxs 
+{margin: 15px 0px 0px 0px; border-radius:20px; padding: 5px 2vw 5px 2vw;
+background-color: white;box-shadow:2px 2px 8px 3px #e0e0e0;
+position: relative;}
+
+.prices, .mealBoxs i{position:absolute; bottom:5px; right: 2vw;}
+
 }
