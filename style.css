@@ -3,18 +3,38 @@ body{margin:0px;font-family: 'Roboto';}
 .blocMainPage
 {margin: auto; width: 100%;} 
 
-.buttons {border:none; background:linear-gradient(#FF79DA, #9356DC);
-border-radius: 30px;padding:15px 20px 15px 20px;color:white;}
 
+/*ANIMATIONS BOUTTONS*/
+.buttons {
+border:none; 
+background:linear-gradient(#FF79DA, #9356DC);
+border-radius: 30px;
+padding:15px 20px 15px 20px;
+color:white;
+cursor:pointer;
+opacity: 10;
+-webkit-transition: .4s ease-in-out;
+transition: .4s ease-in-out;} 
+
+.buttons:hover {opacity: .8;}    
+
+/*HEADER*/
 header
 {padding: 20px 26vw 15px 26vw;background-color: #f8f6f4;
 position: relative; text-align:center;}
 /*SEARCH*/
+
+.localisation{
+    background: linear-gradient(#D7D4D1,27%,#F2F2F2);
+    border-bottom: solid 1.5px#D7D4D1;    
+}
+
 #searchBar1
-{background: linear-gradient(#D7D4D1,27%,#F2F2F2);
-border-bottom: solid 1.5px#D7D4D1;    
+{
 margin: auto;
-padding:15px 50vw 15px 45vw;
+width:200px;
+padding-top:1.2rem; padding-bottom:1.2rem; padding-left: 3.5rem;
+align-items: center;
 display: flex;
 } 
 
@@ -100,7 +120,7 @@ background-color: #99E2D0;
 color:teal;
 font-weight: bold;
 padding: 5px 10px 5px 10px;}
-
+/*ANIMATION COEUR*/
 .heartLogo i
 {position:absolute; bottom: 25px; right: 20px; font-size: 1.7em;}
 
@@ -115,28 +135,29 @@ padding: 5px 10px 5px 10px;}
     background-color: rgba(0, 0, 0, 0.795);
 }
 
-.footerContain ul{
-display: flex;
-text-align: center;
-margin-left: 25vw;}
-
 .footerContain li 
 { 
     list-style-type: none; 
-    margin:0px 30px 5px 0px;
+    margin-bottom: 5px;
 }
 
 .footerContain h3 
 {
     font-family: 'Shrikhand';
-    font-size: 1.7em;
+    font-size:1.2rem;
     font-weight: 100;
     font-stretch: extra-expanded;
-    text-align: center;
 }
 
 .footerContain i
 {margin-right: 8px;}
+
+.footerLinks a{text-decoration:none; color:white;}
+
+@media all and (min-width: 768px) and (max-width:1023px)
+{
+    #fonctBloc{flex-direction:column;}
+}
 
 @media all and (max-width:767px)
 {
@@ -162,95 +183,4 @@ margin-left: 25vw;}
     width: 90vw; height: 30vh; 
     margin-top:0px;
 } 
-
-/*FOOTER*/
-.footerContain 
-{
-    padding: 10px 0px 25px 0px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.795);
-}
-
-.footerContain ul{
-    display:flex;
-    flex-direction: column;
-    text-align: unset;
-    margin-left:0px;
-}
-
-.footerContain h3{
-    margin-left:10vw;
-    font-size:1.3em;
-    text-align: unset;
-}
-
-.footerContain li 
-{ 
-    list-style-type: none; 
-    margin-bottom: 5px;
-}
-
-.footerContain h3 
-{
-    font-family: 'Shrikhand';
-    font-weight: 100;
-    font-stretch: extra-expanded;
-}
-
-.footerContain i
-{margin-right: 8px;}
-/*pages menus*/
-.blocpageRestaurants 
-{
-   padding: 0px;
-}
-
-.back i {
-    color: black; 
-    text-decoration: none; font-size: 1.4em;
-    position: absolute; left: 5vw; top: 3vh;
-} 
-/*Meal title*/
-.mealBloc {
-    border-top-left-radius: 37px; border-top-right-radius: 37px;
-    background-color: #f8f6f4;padding: 2vh 5vw 10vh 5vw; margin-top: 25vh;
-    position: relative; z-index: 2;}
-
-.mealPicture{position: absolute; z-index: 1;}
-
-.mealPicture img {
-    width: 100%; height: 30vh;object-fit: cover;margin:0;padding:0;} 
-
-.mealBloc h1 {
-    font-family: 'Shrikhand';margin: 14px 0px 0px 0px;}
-
-.mealBloc h1 i {
-    margin-left: 60px;} 
-
-.mealBoxs 
-{margin: 15px 0px 0px 0px; border-radius:14px; padding: 2px 2px 2px 2px;
-background-color: white;box-shadow:2px 2px 8px 3px #e0e0e0;
-position: relative;}
-
-.mealBloc h2{
-    padding-top:20px;margin-bottom: 3px;}
-
-.mealBloc .greenBorder{
-    width: 40px; border:solid 2px #99E2D0;}
-
-.mealBoxs h3, .mealBoxs p{
-    margin: 8px 8px 8px 8px;}
-
-.mealBoxs i{
-    visibility: hidden;}
-
-.prices {
-    position: absolute; right: 10px;} 
-
-.order {text-align: center;
-    padding-top: 40px;}
-
-.order button{
-    padding-left: 40px;padding-right:40px;}  
-
 }

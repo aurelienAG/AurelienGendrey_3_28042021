@@ -6,7 +6,7 @@
     <meta name="description" content="Réservez le menu qui vous convient.
     Découvre des restaurants d'exception, séléctionnés par nos soins.
     Choisissez votre restaurant - Composez votre menu - Dégustez au restaurant">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/2897f175fe.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&amp;family=Shrikhand&amp;display=swap" rel="stylesheet">
     <title>Oh My Food-la note enchantée</title> 
@@ -17,17 +17,16 @@
  
     <header>
         <nav> 
-        <a href="#" class="back"><i class="fas fa-arrow-left"></i></a><img src="images/ohmyfood@2x.svg" alt="logo ohmyfood">  
+        <a href="index.html" class="back"><i class="fas fa-arrow-left"></i></a><img src="images/ohmyfood@2x.svg" alt="logo ohmyfood">  
         </nav>
     </header>
-    
- <main> 
+
        <section class="mealPicture"><img src="images/noteenchantee.jpg" alt="la note enchantée"></section>
      
    <main class="mealBloc"> 
         
-    <h1><strong>La note enchantée</strong><i class="far fa-heart"></i></h1>
-
+    <div class="restaurantName"><h1><strong>La note enchantée</strong></h1><div class="like"><i class="fas fa-heart"></i><i class="far fa-heart"></i></div></div> 
+    <div class="mealChoice">
     <section class="starters">
         <h2>ENTRÉES</h2>
         <div class="greenBorder"></div>
@@ -82,7 +81,7 @@
            <p>Déstructurée<span class="prices"><strong>23€</strong></span><i class="fas fa-check"></i></p>
        </div>
     </section> 
-
+    </div>
     <div class="order"><button class="buttons" type="submit">Commander</button></div>
  </main>   
  </div>
@@ -90,11 +89,11 @@
  <footer>
     <div class="footerContain">
         <ul> 
-            <li><h3>ohmyfood</h3></li>
-            <li><span id="forkLogo"><i class="fas fa-utensils"></i></span>Proposer un restaurant</li>
-            <li><span id="partnerLogo"><i class="fas fa-hands-helping"></i></span>Devenir partenaire</li>
-            <li>Mentions légales</li>
-            <li>Contact</li>
+            <li class="footerLinks"><a href="#"><h3>ohmyfood</h3></a></li>
+            <li class="footerLinks"><a href="#"><span id="forkLogo"><i class="fas fa-utensils"></i></span>Proposer un restaurant</a></li>
+            <li class="footerLinks"><a href="#"><span id="partnerLogo"><i class="fas fa-hands-helping"></i></span>Devenir partenaire</a></li>
+            <li class="footerLinks"><a href="#">Mentions légales</a></li>
+            <li class="footerLinks"><a href="mailto:contact@ohmyfood.fr">Contact</a></li>
         </ul>
     </div>
 </footer>
