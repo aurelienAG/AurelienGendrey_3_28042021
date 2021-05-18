@@ -36,23 +36,57 @@ position: relative; text-align:center;}
 
 .restaurantName{display:flex;flex-direction:row;align-items: baseline;justify-content: space-between;}
 
-.like .fas, .like .far
-{
-    font-size: 1.7em;
-}
-.like .fas{
-    z-index: 2;
-    position: absolute;
-    right:3.1rem; top: 2.1rem;
-    background: linear-gradient(to bottom, #9356dc 10%, #ff79da);
+.like:hover i.fa-heart {
+    display: none;
+    }
+    .like:hover i.fas.fa-heart {
+    display: block;
+    }
+    .like {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2rem;
+    margin: 1.2rem 0 2rem 7rem;
+    }
+
+    .like_start:hover i.fa-heart {
+    display: none;
+    }
+    .like_start:hover i.fas.fa-heart {
+    display: block;
+    }
+    .like_start {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2rem;
+    margin-top: -2rem;
+    }
+
+    .like_3:hover i.fa-heart {
+    display: none;
+    }
+    .like_3:hover i.fas.fa-heart {
+    display: block;
+    }
+    .like_3 {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2rem;
+    margin: 1.2rem 0 2rem 9rem;
+    }
+    
+    i.fa-heart:hover {
+    cursor: pointer;
+    border: 0 solid transparent;
+    }
+    i.fas.fa-heart {
+    display: none;
+    background: linear-gradient(to bottom, #9356dc, #ff79da);
+    background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.like .far{
-    z-index: 1;
-    position: absolute;
-    right:2rem; top: 2.2rem;
-}
+    color: transparent;
+    font-size: 2rem;
+    }
 
 .mealChoice {
 display:flex; 
@@ -60,25 +94,41 @@ flex-direction:row;
 justify-content: space-between;
 width: 100%;} 
 
+
+/*Animations: apparation progressive des cartes menus*/
 .mealBoxs{
  margin: 15px 0px 15px 0px; 
  border-radius:14px; padding: 2px 2px 2px 2px;
  width:27vw; max-width: 600px;   
 background-color: white;box-shadow:2px 2px 8px 3px #e0e0e0;
 position: relative;
-   animation: fadein 2s;
-    -webkit-animation: fadein 2s; 
+   /*animation: fadein 3s forwards;*/
+   -webkit-animation: fadein 3.5s forwards;
+   animation-duration: 0.75s;
+   opacity: 0;
 }
-.options{animation: fadein 2s;
-    -webkit-animation: fadein 2s;}
-@keyframes fadein {
+
+.starter1, .m_meal1, .dessert1{
+animation-delay: 0.35s;} 
+
+.starter2, .m_meal2, .dessert2{
+    animation-delay: 0.75s;}
+
+.starter3, .m_meal3, .dessert3{
+    animation-delay: 1.1s;} 
+
+.starter4, .m_meal4, .dessert4{
+    animation-delay: 1.45s;} 
+
+
+/*@keyframes fadein {
     from {
         opacity:0;
     }
     to {
         opacity:1;
     }
-} 
+} */
 
 @-webkit-keyframes fadein { 
     from {
@@ -87,7 +137,9 @@ position: relative;
     to {
         opacity:1;
     }
-}
+}  
+
+
 .mealBloc h2{
     padding-top:20px;margin-bottom: 3px;
 }
@@ -100,8 +152,14 @@ position: relative;
     margin: 8px 15px 8px 8px;
     }
 
-.mealBoxs i{
-    visibility: hidden;}
+.check{
+    background-color: #99E2D0;
+    visibility: hidden;} 
+.check i{
+    color:#99E2D0; 
+    border-radius: 100%; 
+    padding: 1em 1em; 
+}    
 
 .prices {
     position: absolute; 
@@ -113,7 +171,6 @@ position: relative;
 .order button{
     padding-left: 40px;padding-right:40px;}  
 
-    /*FOOTER*/
 /*FOOTER*/
 .footerContain 
 {
