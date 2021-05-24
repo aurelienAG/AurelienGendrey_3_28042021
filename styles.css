@@ -120,17 +120,29 @@ position: relative;
    opacity: 0;
 }
 
-.starter1, .m_meal1, .dessert1{
-animation-delay: 0.35s;} 
-
-.starter2, .m_meal2, .dessert2{
-    animation-delay: 0.75s;}
-
-.starter3, .m_meal3, .dessert3{
-    animation-delay: 1.1s;} 
-
-.starter4, .m_meal4, .dessert4{
-    animation-delay: 1.45s;} 
+.starter1{
+    animation-delay: 0.35s;} 
+    
+    .starter2{
+        animation-delay: 0.5s;}
+    
+    .starter3{
+        animation-delay: 0.7s;} 
+    
+    .starter4{
+        animation-delay: 0.9s;} 
+    
+    .m_meal1{animation-delay: 1.1s;}
+    
+    .m_meal2{animation-delay: 1.3s;}
+    
+    .m_meal3{animation-delay: 1.5s;}
+    
+    .dessert1{animation-delay: 1.7s;} 
+    
+    .dessert2{animation-delay: 1.9s;} 
+    
+    .dessert3{animation-delay: 2.1s;} 
 
 
 /*@keyframes fadein {
