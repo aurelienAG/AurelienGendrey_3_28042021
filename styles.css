@@ -22,19 +22,31 @@ position: relative; text-align:center;}
 } 
 /*Meal title*/
 .mealBloc {
-    border-top-left-radius: 37px; border-top-right-radius: 37px;
-    background-color: #f8f6f4;padding: 2vh 5vw 10vh 5vw; margin-top: 25vh;
+    border-top-left-radius: 37px;
+    border-top-right-radius: 37px;
+    background-color: #f8f6f4;
+    padding: 2vh 5vw 10vh 5vw; 
+    margin-top: 25vh;
     position: relative; z-index: 2;}
 
-.mealPicture{position: absolute; z-index: 1;}
+.mealPicture{
+    position: absolute; z-index: 1;}
 
 .mealPicture img {
-    width: 100%; height: 30vh;object-fit: cover;margin:0;padding:0;} 
+    width: 100%; height: 30vh;
+    object-fit: cover;
+    margin:0;
+    padding:0;} 
 
 .mealBloc h1 {
-    font-family:'Shrikhand';margin: 14px 0px 0px 0px;}
+    font-family:'Shrikhand';
+    margin: 14px 0px 0px 0px;}
 
-.restaurantName{display:flex;flex-direction:row;align-items: baseline;justify-content: space-between;}
+.restaurantName{
+    display:flex;
+    flex-direction:row;
+    align-items: baseline;
+    justify-content: space-between;}
 
 .like:hover i.fa-heart {
     display: none;
@@ -46,7 +58,7 @@ position: relative; text-align:center;}
     display: flex;
     justify-content: flex-end;
     font-size: 2rem;
-    margin: 1.2rem 0 2rem 7rem;
+    margin: 1.2rem 0 2rem 0rem;
     }
 
     .like_start:hover i.fa-heart {
