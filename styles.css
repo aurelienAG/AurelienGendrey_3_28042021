@@ -1,45 +1,60 @@
-body{margin:0px;font-family: 'Roboto';}
+body{
+    margin:0px;
+    font-family:'Roboto';
+    }
 
-.blocMainPage
-{margin: auto; width: 100%;} 
+.blocMainPage{
+    margin: 0px;} 
 
-.buttons {border:none; background:linear-gradient(#FF79DA, #9356DC);
-border-radius: 30px;padding:15px 20px 15px 20px;color:white;text-decoration: none;cursor:pointer;} 
+.buttons{
+    border:none; 
+    background:linear-gradient(#FF79DA, #9356DC);
+    border-radius: 30px;
+    padding:15px 20px 15px 20px;
+    color:white;
+    text-decoration:none;
+    cursor:pointer;} 
 
-header
-{padding: 20px 26vw 15px 26vw;background-color: #f8f6f4;
-position: relative; text-align:center;}
+header{
+    padding: 20px 26vw 20px 26vw;
+    background-color: #f8f6f4;
+    position: relative; 
+    text-align:center;}
 
-.blocpageRestaurants 
-{
+.blocpageRestaurants{
    padding: 0px;
-}
+} 
+
+.blocpageRestaurants h2{
+    font-weight: 400;
+} 
 
 .back i {
     color: black; 
-    text-decoration: none; font-size: 1.4em;
-    position: absolute; left: 5vw; top: 3vh;
+    text-decoration: none; 
+    font-size: 1.4em;
+    position: absolute; left: 5vw; top: 35%;
 } 
 /*Meal title*/
 .mealBloc {
-    border-top-left-radius: 37px;
-    border-top-right-radius: 37px;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
     background-color: #f8f6f4;
     padding: 2vh 5vw 10vh 5vw; 
-    margin-top: 25vh;
-    position: relative; z-index: 2;}
+    margin-top: 25vh; 
+    position: relative; z-index: 1;}
 
 .mealPicture{
-    position: absolute; z-index: 1;}
-
-.mealPicture img {
-    width: 100%; height: 30vh;
+    position: absolute; z-index: 0;
+    width: 100%; 
+    height:30vh;
     object-fit: cover;
     margin:0;
-    padding:0;} 
+    padding:0;}
 
 .mealBloc h1 {
     font-family:'Shrikhand';
+    font-size: 1.9rem;
     margin: 14px 0px 0px 0px;}
 
 .restaurantName{
@@ -94,7 +109,6 @@ position: relative; text-align:center;}
     i.fas.fa-heart {
     display: none;
     background: linear-gradient(to bottom, #9356dc, #ff79da);
-    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     font-size: 2rem;
@@ -104,22 +118,71 @@ position: relative; text-align:center;}
 display:flex; 
 flex-direction:row;
 justify-content: space-between;
-width: 100%;} 
+width: 100%;
+} 
 
 
 /*Animations: apparation progressive des cartes menus*/
 .mealBoxs{
  margin: 15px 0px 15px 0px; 
- border-radius:14px; padding: 2px 2px 2px 2px;
- width:27vw; max-width: 600px;   
+ border-radius:14px;
+ width:27vw; max-width: 600px; 
 background-color: white;box-shadow:2px 2px 8px 3px #e0e0e0;
+cursor:pointer;
 position: relative;
+ display: flex; 
+flex-direction: row;
+align-items:center;
    /*animation: fadein 3s forwards;*/
    -webkit-animation: fadein 3.5s forwards;
    animation-duration: 0.75s;
-   opacity: 0;
+   opacity: 0; 
 }
 
+.mealBoxs:hover .info_meal{
+    width: 60%;
+}
+
+.mealBoxs:hover .prices{
+  animation: translate_prices 0.4s forwards;
+}
+
+.mealBoxs:hover .check{
+  animation: translate_check 0.5s forwards;
+  visibility: visible;
+}
+
+@keyframes translate_prices{
+   0%{
+    right:2%;
+   }
+   100%{
+    right:24%;
+   }
+}
+
+@keyframes translate_check{
+    0%{
+        width:0%;    
+    }
+    100%{
+        width:18%;
+    }
+}
+.mealBoxs:hover .check i{
+    animation: check_rotate 0.4s forwards;
+}
+
+@keyframes check_rotate{
+    0%{
+        transform: rotate(0deg);
+        font-size:0em;
+    }
+    100%{
+        transform: rotate(360deg); 
+        font-size: 0.8em;
+    }
+}
 .starter1{
     animation-delay: 0.35s;} 
     
@@ -163,9 +226,9 @@ position: relative;
     }
 }  
 
-
 .mealBloc h2{
-    padding-top:20px;margin-bottom: 3px;
+    padding-top:20px;
+    margin-bottom: 3px;
 }
 
 .mealBloc .greenBorder{
@@ -173,21 +236,48 @@ position: relative;
     border:solid 2px #99E2D0;}
 
 .mealBoxs h3, .mealBoxs p{
-    margin: 8px 15px 8px 8px;
+    margin: 8px 8px 8px 8px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     }
+    
+.info_meal {
+    padding: 0.35rem 0.2rem;
+    overflow: hidden;
+    width:82%;
+}
 
 .check{
     background-color: #99E2D0;
-    visibility: hidden;} 
+    width: 0%;
+    height:100%;
+    margin:0px 0px 0px 0px;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+    position: absolute; 
+    right: 0px;
+    display:flex;
+    visibility:hidden;
+    align-items: center;
+    justify-content: center;
+    } 
+
 .check i{
     color:#99E2D0; 
-    border-radius: 100%; 
-    padding: 1em 1em; 
+    background-color: white;
+    font-size:0;
+    border-radius: 100%;
+    padding: 0.32rem 0.3rem 0.2rem 0.3rem; 
 }    
 
-.prices {
+.prices{
+    padding: 3rem 0px 0.7rem 0px;
+    margin-right:0px;
+    margin-left: 5px;
     position: absolute; 
-    right: 10px;} 
+    right: 2%;
+} 
 
 .order {text-align: center;
     padding-top: 40px;}
@@ -230,10 +320,11 @@ position: relative;
     .mealChoice{
         flex-direction: column;
         justify-content: unset;
-    }
-   
+    } 
+    
     .mealBoxs{
-        width:95vw;}
+        width:90%;
+   }
 } 
 
 /*Version Mobile*/ 
@@ -245,5 +336,5 @@ position: relative;
 }
 
 .mealBoxs{
-    width:88vw;}
+    width:90vw;}
 }
