@@ -98,7 +98,6 @@ border-radius: 30px;
 padding:15px 20px 15px 20px;
 color:white;
 cursor:pointer;
-opacity: 10;
 -webkit-transition: .4s ease-in-out;
 transition: .4s ease-in-out;} 
 
@@ -225,9 +224,21 @@ padding: 5px 10px 5px 10px;}
         display: none;
         }
         .like:hover i.fas.fa-heart {
-        display: block;
-        }
-        .like {
+        display: block; 
+        opacity: 4.5;
+        animation: fill_heart 0.8s forwards; 
+        } 
+
+        @keyframes fill_heart{
+            0%{
+             opacity:2;
+            }
+            100%{
+             opacity:4.5;
+            }
+         }
+
+        .like i {
         font-size: 1.7em;
         position:absolute; 
         top:82%; 
@@ -236,15 +247,15 @@ padding: 5px 10px 5px 10px;}
             
         i.fa-heart:hover {
         cursor: pointer;
-        border: 0 solid transparent;
         }
         i.fas.fa-heart {
         display: none;
         background: linear-gradient(to bottom, #9356dc, #ff79da);
         -webkit-background-clip: text;
         color: transparent;
+        opacity: 2;
         }
-
+          
 .cardDescription{
     margin: 2rem 0rem 2rem 1rem; 
     line-height:0.2em;} 

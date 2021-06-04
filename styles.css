@@ -13,7 +13,11 @@ body{
     padding:15px 20px 15px 20px;
     color:white;
     text-decoration:none;
-    cursor:pointer;} 
+    cursor:pointer;
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;} 
+        
+.buttons:hover {opacity: .8;}  
 
 header{
     padding: 20px 26vw 20px 26vw;
@@ -76,32 +80,6 @@ header{
     margin: 1.2rem 0 2rem 0rem;
     }
 
-    .like_start:hover i.fa-heart {
-    display: none;
-    }
-    .like_start:hover i.fas.fa-heart {
-    display: block;
-    }
-    .like_start {
-    display: flex;
-    justify-content: flex-end;
-    font-size: 2rem;
-    margin-top: -2rem;
-    }
-
-    .like_3:hover i.fa-heart {
-    display: none;
-    }
-    .like_3:hover i.fas.fa-heart {
-    display: block;
-    }
-    .like_3 {
-    display: flex;
-    justify-content: flex-end;
-    font-size: 2rem;
-    margin: 1.2rem 0 2rem 9rem;
-    }
-    
     i.fa-heart:hover {
     cursor: pointer;
     border: 0 solid transparent;
@@ -208,23 +186,23 @@ align-items:center;
     .dessert3{animation-delay: 2.1s;} 
 
 
-/*@keyframes fadein {
+@keyframes fadein {
     from {
         opacity:0;
     }
     to {
         opacity:1;
     }
-} */
+} 
 
-@-webkit-keyframes fadein { 
+/*@-webkit-keyframes fadein { 
     from {
         opacity:0;
     }
     to {
         opacity:1;
     }
-}  
+}  */
 
 .mealBloc h2{
     padding-top:20px;
