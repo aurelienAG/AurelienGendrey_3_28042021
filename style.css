@@ -18,7 +18,7 @@ body{
     z-index: 2;   
     animation: opacity 0.1s forwards;
     animation-duration: 0.5s;
-    animation-delay: 3s;}
+    animation-delay: 3.5s;}
 
 @keyframes opacity { 
     from {
@@ -27,7 +27,7 @@ body{
     to {
         opacity: 0; z-index: -1;
     }
-} 
+}
 
 .loader {
     position: absolute;
@@ -40,7 +40,7 @@ body{
     left: 35%;
     border-radius: 50%;
     background: linear-gradient(#9356DC, #FF79DA);
-    animation: animate 0.8s linear infinite;}
+    animation: animate .8s linear infinite;}
 
 .loader:after{
     content: '';
@@ -52,6 +52,14 @@ body{
     background: whitesmoke;
     border: solid #FF79DA 1px;
     border-radius: 50%;}    
+  
+    @keyframes animate{
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }}    
 
 .loader span{
     position: absolute;
@@ -81,14 +89,6 @@ body{
     0% {transform:scale(1);
     }
     100% {transform:scale(1.2);}}
-
-@keyframes animate{
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }}
         
 /*ANIMATIONS BOUTTONS*/
 .buttons{
@@ -220,40 +220,28 @@ font-weight: bold;
 padding: 5px 10px 5px 10px;}
 
 /*ANIMATION COEUR*/
-    .like:hover i.fa-heart {
-        display: none;
-        }
-        .like:hover i.fas.fa-heart {
-        display: block; 
-        opacity: 4.5;
-        animation: fill_heart 0.8s forwards; 
-        } 
+.like i {
+    font-size: 1.7em;
+    position:absolute; 
+    top:82%; 
+    right:8%; 
+    }
 
-        @keyframes fill_heart{
-            0%{
-             opacity:2;
-            }
-            100%{
-             opacity:4.5;
-            }
-         }
+i.fas.fa-heart {
+    display: none;
+    background: linear-gradient(to bottom, #9356dc, #ff79da);
+    -webkit-background-clip: text;
+    color: transparent;
+    }
 
-        .like i {
-        font-size: 1.7em;
-        position:absolute; 
-        top:82%; 
-        right:8%; 
-        }
+.like:hover i.fa-heart {
+    display: none;}
+
+.like:hover i.fas.fa-heart {
+    display: block;} 
             
-        i.fa-heart:hover {
+i.fa-heart:hover {
         cursor: pointer;
-        }
-        i.fas.fa-heart {
-        display: none;
-        background: linear-gradient(to bottom, #9356dc, #ff79da);
-        -webkit-background-clip: text;
-        color: transparent;
-        opacity: 2;
         }
           
 .cardDescription{
